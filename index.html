@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PhishProof Campus: Interactive cybersecurity learning platform for college students. Think Before You Click.">
+  <title>PhishProof Campus | Think Before You Click</title>
+  
+  <!-- Original Local Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Accessibility Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Global Application Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#landing" class="brand-link" data-nav-target="landing" aria-label="PhishProof Campus Home">
+        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-title">PhishProof</span>
+          <span class="brand-tagline">Think Before You Click.</span>
+        </div>
+      </a>
+
+      <!-- Primary Navigation -->
+      <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main Navigation">
+        <a href="#training" class="nav-link" data-nav-target="training" data-target="training">Training</a>
+        <a href="#lab" class="nav-link" data-nav-target="lab" data-target="lab">Red Flag Lab</a>
+        <a href="#dashboard" class="nav-link" data-nav-target="dashboard" data-target="dashboard">Dashboard</a>
+        <button class="btn btn-primary btn-sm header-cta-btn" data-nav-target="training">Start Training</button>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main id="main-content" role="main">
+
+    <!-- ====================================================================
+         VIEW 1: LANDING PAGE
+         ==================================================================== -->
+    <section id="view-landing" class="view-section">
+      <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+          <div class="hero-pill">
+            <span aria-hidden="true">🛡️</span> PromptWars × KickToTech 2026 • Cybersecurity &amp; Digital Safety
+          </div>
+          <h1 class="hero-title">
+            Think Before You Click.<br>
+            <span>Defend Your Campus Identity.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Students face deceptive job offers, fake financial aid grants, coercive disciplinary notices, and malicious QR codes daily. PhishProof Campus trains you to spot red flags, analyze simulated attacks, and protect your digital life safely.
+          </p>
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-lg" data-nav-target="training" id="hero-btn-start">
+              Start Training Now (10 Challenges)
+            </button>
+            <button class="btn btn-outline btn-lg" data-nav-target="lab">
+              Inspect Red Flag Lab
+            </button>
+          </div>
+
+          <!-- Quick Metrics -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-number">10</span>
+              <span class="stat-label">Realistic Campus Scenarios</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Safe &amp; Offline Functional</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">Instant</span>
+              <span class="stat-label">Forensic Explanations</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Preview Showcase -->
+        <div class="preview-showcase">
+          <div class="section-heading-wrap">
+            <span class="section-tag">Interactive Preview</span>
+            <h2 class="section-title">Experience Realistic Campus Threats</h2>
+            <p class="section-sub">Carefully modeled after real attacks observed on modern college campuses.</p>
+          </div>
+          <div id="landing-live-preview"></div>
+        </div>
+
+        <!-- Challenge Categories Preview -->
+        <div class="challenge-categories-section">
+          <div class="section-heading-wrap">
+            <span class="section-tag">Curriculum Matrix</span>
+            <h2 class="section-title">Core Threat Vectors Covered</h2>
+            <p class="section-sub">Explore the primary attack vectors college students encounter every semester.</p>
+          </div>
+          <div id="categories-grid" class="categories-grid"></div>
+        </div>
+
+        <!-- Educational & Safety Ethics Notice -->
+        <div class="safety-ethics-card">
+          <div class="safety-shield-icon" aria-hidden="true">🔒</div>
+          <div class="safety-text">
+            <h3>Strict Educational Safety Architecture</h3>
+            <p>
+              PhishProof Campus is engineered exclusively for safe educational training and hackathon demonstration. All scenarios, domains, departments, and names are completely fictional.
+            </p>
+            <p>
+              To guarantee zero risk:
+            </p>
+            <ul class="safety-points">
+              <li><span>🛡️</span> Zero credentials or passwords requested</li>
+              <li><span>🚫</span> No live email or SMS delivery capabilities</li>
+              <li><span>🔒</span> Zero external API dependencies or trackers</li>
+              <li><span>💻</span> Simulated URLs rendered as inert, non-clickable text</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 2: INTERACTIVE TRAINING ENGINE
+         ==================================================================== -->
+    <section id="view-training" class="view-section hidden" aria-hidden="true">
+      <div class="container">
+        <!-- Training Header Bar -->
+        <div class="training-header-bar">
+          <div class="training-progress-meta">
+            <div class="progress-labels">
+              <span id="q-progress-text">Question 1 of 10</span>
+              <span id="q-current-score" class="score-accent">0 pts</span>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="q-progress-bar-track">
+              <div id="q-progress-bar" class="progress-fill"></div>
+            </div>
+          </div>
+          <button id="btn-training-restart" class="btn btn-outline btn-sm" title="Restart from question 1">
+            🔄 Restart Session
+          </button>
+        </div>
+
+        <!-- Question & Scenario Container -->
+        <div class="scenario-card-container">
+          <!-- Metadata Badges -->
+          <div class="scenario-meta-row">
+            <span id="q-category-badge" class="scenario-category">Category</span>
+            <span id="q-difficulty-badge" class="badge">Difficulty</span>
+          </div>
+
+          <!-- Simulated Message Container -->
+          <div id="q-message-card"></div>
+
+          <!-- Options Section -->
+          <div class="options-wrapper">
+            <h3 class="options-title-bar">How should a vigilant student evaluate and handle this message?</h3>
+            <div id="q-options-container" class="options-grid" role="group" aria-label="Answer Choices"></div>
+          </div>
+
+          <!-- Action Controls Bar -->
+          <div class="training-actions-bar">
+            <button id="btn-check-answer" class="btn btn-primary btn-lg" disabled>
+              Check My Answer
+            </button>
+            <button id="btn-next-question" class="btn btn-primary btn-lg hidden">
+              Next Question ➔
+            </button>
+          </div>
+
+          <!-- Instant Feedback Card -->
+          <div id="q-feedback-card" class="feedback-card hidden" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 3: SESSION RESULTS & REVIEW
+         ==================================================================== -->
+    <section id="view-results" class="view-section hidden" aria-hidden="true">
+      <div class="container">
+        <div class="results-card">
+          <div class="results-badge-wrap">
+            <span id="res-grade-badge" class="results-tier-badge">Cyber Sentinel</span>
+          </div>
+          <div class="results-score-display">
+            <span id="res-score-number" class="score-big">0</span>
+            <span class="score-max">/ 1000 pts</span>
+          </div>
+          <p id="res-accuracy-text" class="results-accuracy">0% Accuracy (0/10 Correct)</p>
+          <p id="res-verdict-text" class="results-verdict"></p>
+
+          <div class="results-buttons-row">
+            <button id="btn-results-replay" class="btn btn-primary">
+              🔁 Replay Training
+            </button>
+            <button id="btn-results-dashboard" class="btn btn-outline">
+              📊 View Dashboard
+            </button>
+            <button id="btn-results-lab" class="btn btn-outline">
+              🔬 Forensic Lab
+            </button>
+          </div>
+
+          <!-- Detailed Mistakes Review -->
+          <div id="res-mistakes-container" class="res-mistakes-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 4: DASHBOARD & ANALYTICS
+         ==================================================================== -->
+    <section id="view-dashboard" class="view-section hidden" aria-hidden="true">
+      <div class="container">
+        <div class="section-heading-wrap">
+          <span class="section-tag">Performance Analytics</span>
+          <h2 class="section-title">Student Defense Profile</h2>
+          <p class="section-sub">Track your security instincts, completed sessions, and historical trends over time.</p>
+        </div>
+
+        <!-- First-time User Empty State -->
+        <div id="dash-empty-state" class="dash-empty-card hidden">
+          <div class="empty-icon" aria-hidden="true">🎯</div>
+          <h3>No Completed Sessions Yet</h3>
+          <p>You haven't completed any training sessions yet. Complete your first 10-question evaluation to populate your defense analytics.</p>
+          <button class="btn btn-primary" data-nav-target="training">Start First Session</button>
+        </div>
+
+        <!-- Populated State -->
+        <div id="dash-content-state">
+          <!-- 4-Stat Metric Row -->
+          <div class="dashboard-grid">
+            <div class="dash-stat-card">
+              <span class="dash-stat-label">Completed Sessions</span>
+              <span id="dash-total-sessions" class="dash-stat-val">0</span>
+            </div>
+            <div class="dash-stat-card">
+              <span class="dash-stat-label">Best Session Score</span>
+              <span id="dash-best-score" class="dash-stat-val">0 pts</span>
+            </div>
+            <div class="dash-stat-card">
+              <span class="dash-stat-label">Average Accuracy</span>
+              <span id="dash-avg-accuracy" class="dash-stat-val">0%</span>
+            </div>
+            <div class="dash-stat-card">
+              <span class="dash-stat-label">Latest Activity</span>
+              <span id="dash-latest-date" class="dash-stat-val" style="font-size: 1.25rem;">Never</span>
+            </div>
+          </div>
+
+          <!-- Two Column Panels: History & Topics to Revisit -->
+          <div class="dash-sections-row">
+            <!-- Training History Timeline -->
+            <div class="dash-panel">
+              <h3 class="dash-panel-title">Recent Training Sessions</h3>
+              <div id="dash-history-list" class="history-list"></div>
+            </div>
+
+            <!-- Vulnerability Diagnostics -->
+            <div class="dash-panel">
+              <h3 class="dash-panel-title">Topics to Revisit (Error Patterns)</h3>
+              <div id="dash-topics-list" class="topics-list"></div>
+            </div>
+          </div>
+
+          <!-- Reset Progress Controls -->
+          <div class="dash-reset-footer">
+            <button type="button" id="btn-open-reset-modal" class="btn btn-outline btn-sm">
+              🗑️ Reset All Progress
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         VIEW 5: RED FLAG LAB (INTERACTIVE WORKBENCH)
+         ==================================================================== -->
+    <section id="view-lab" class="view-section hidden" aria-hidden="true">
+      <div class="container">
+        <div class="section-heading-wrap">
+          <span class="section-tag">Interactive Forensics</span>
+          <h2 class="section-title">Red Flag Investigation Lab</h2>
+          <p class="section-sub">
+            Put on your threat hunter hat! Inspect this realistic simulated attack. Click on suspicious elements directly inside the message or check them off in your forensic workbench to test your detection accuracy.
+          </p>
+        </div>
+
+        <div id="lab-interactive-container"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====================================================================
+       RESET PROGRESS CONFIRMATION MODAL
+       ==================================================================== -->
+  <div id="reset-confirm-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <span class="modal-icon" aria-hidden="true">⚠️</span>
+        <h3 id="modal-title">Reset Training Progress?</h3>
+      </div>
+      <div class="modal-body">
+        <p>This action will permanently wipe your completed session count, best scores, historical logs, and topic diagnostics from this browser's localStorage. This cannot be undone.</p>
+      </div>
+      <div class="modal-actions">
+        <button type="button" id="btn-cancel-reset" class="btn btn-outline">Cancel</button>
+        <button type="button" id="btn-confirm-reset" class="btn btn-danger">Yes, Reset All Data</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>PhishProof Campus</h4>
+          <p>
+            An interactive cybersecurity learning platform empowering college students and young adults to recognize digital manipulation, deceptive links, and social engineering attacks.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Platform Navigation</h5>
+          <ul class="footer-links">
+            <li><button type="button" data-nav-target="landing">Home Overview</button></li>
+            <li><button type="button" data-nav-target="training">Interactive Training</button></li>
+            <li><button type="button" data-nav-target="lab">Red Flag Lab</button></li>
+            <li><button type="button" data-nav-target="dashboard">Defense Dashboard</button></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Safety &amp; Compliance</h5>
+          <ul class="footer-links">
+            <li><span style="color: #94a3b8;">100% Educational &amp; Fictional</span></li>
+            <li><span style="color: #94a3b8;">Zero Credential Harvesting</span></li>
+            <li><span style="color: #94a3b8;">Runs Offline with Zero Backend</span></li>
+            <li><span style="color: #94a3b8;">PromptWars × KickToTech 2026</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 PhishProof Campus. Tagline: Think Before You Click.</span>
+        <span>Track: Cybersecurity &amp; Digital Safety</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Scripts -->
+  <script src="js/scenarios.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/redflag-lab.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
